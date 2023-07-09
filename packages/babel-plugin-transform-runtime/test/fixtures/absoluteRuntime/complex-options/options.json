@@ -1,0 +1,26 @@
+{
+  "externalHelpers": false,
+  "presets": [
+    [
+      "env",
+      {
+        "corejs": 3,
+        "useBuiltIns": "entry"
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "regenerator": false,
+        "corejs": false,
+        "helpers": true,
+        "useESModules": true,
+        "absoluteRuntime": true,
+        "version": "7.100.0"
+      }
+    ]
+  ],
+  "BABEL_8_BREAKING": true
+}

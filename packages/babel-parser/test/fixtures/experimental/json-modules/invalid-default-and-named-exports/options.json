@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "importAssertions",
+    "exportDefaultFrom"
+  ],
+  "sourceType": "module"
+}

@@ -1,0 +1,75 @@
+{
+  "name": "@babel/node",
+  "version": "7.22.6",
+  "description": "Babel command line",
+  "author": "The Babel Team (https://babel.dev/team)",
+  "homepage": "https://babel.dev/docs/en/next/babel-node",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-node"
+  },
+  "keywords": [
+    "6to5",
+    "babel",
+    "es6",
+    "transpile",
+    "transpiler",
+    "babel-cli",
+    "compiler"
+  ],
+  "dependencies": {
+    "@babel/register": "workspace:^",
+    "commander": "^4.0.1",
+    "core-js": "^3.30.2",
+    "node-environment-flags": "^1.0.5",
+    "regenerator-runtime": "^0.13.11",
+    "v8flags": "^3.1.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0"
+  },
+  "devDependencies": {
+    "@babel/core": "workspace:^",
+    "@babel/helper-fixtures": "workspace:^",
+    "@babel/preset-env": "workspace:^",
+    "@babel/runtime": "workspace:^",
+    "@types/v8flags": "^3.1.1",
+    "fs-readdir-recursive": "^1.0.0",
+    "make-dir": "condition:BABEL_8_BREAKING ? : ^2.1.0",
+    "rimraf": "^3.0.0"
+  },
+  "bin": {
+    "babel-node": "./bin/babel-node.js"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "conditions": {
+    "BABEL_8_BREAKING": [
+      {
+        "engines": {
+          "node": "^16.20.0 || ^18.16.0 || >=20.0.0"
+        }
+      },
+      {
+        "exports": null
+      }
+    ],
+    "USE_ESM": [
+      {
+        "type": "module"
+      },
+      null
+    ]
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "type": "commonjs"
+}

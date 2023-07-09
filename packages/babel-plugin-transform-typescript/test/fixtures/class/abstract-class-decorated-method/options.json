@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "transform-typescript",
+    [
+      "proposal-decorators",
+      {
+        "version": "legacy"
+      }
+    ]
+  ],
+  "sourceType": "module"
+}

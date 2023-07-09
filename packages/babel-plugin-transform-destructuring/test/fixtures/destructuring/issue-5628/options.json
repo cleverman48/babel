@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "transform-arrow-functions",
+    "transform-destructuring",
+    "transform-spread",
+    "transform-parameters",
+    "transform-block-scoping",
+    "transform-object-rest-spread",
+    "transform-regenerator"
+  ]
+}

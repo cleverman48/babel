@@ -1,0 +1,61 @@
+{
+  "name": "@babel/helper-compilation-targets",
+  "version": "7.22.6",
+  "author": "The Babel Team (https://babel.dev/team)",
+  "license": "MIT",
+  "description": "Helper functions on Babel compilation targets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-helper-compilation-targets"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin"
+  ],
+  "dependencies": {
+    "@babel/compat-data": "workspace:^",
+    "@babel/helper-validator-option": "workspace:^",
+    "@nicolo-ribaudo/semver-v6": "^6.3.3",
+    "browserslist": "^4.21.9",
+    "lru-cache": "condition:BABEL_8_BREAKING ? ^7.14.1 : ^5.1.1",
+    "semver": "condition:BABEL_8_BREAKING ? ^7.3.4 : "
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "workspace:^",
+    "@babel/helper-plugin-test-runner": "workspace:^",
+    "@types/lru-cache": "^5.1.1",
+    "@types/semver": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "type": "commonjs",
+  "conditions": {
+    "USE_ESM": [
+      {
+        "type": "module"
+      },
+      null
+    ],
+    "BABEL_8_BREAKING": [
+      {
+        "engines": {
+          "node": "^16.20.0 || ^18.16.0 || >=20.0.0"
+        }
+      },
+      {}
+    ]
+  }
+}
